@@ -13,7 +13,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://tinkoff.web-gen.ru:444/api/team_search/?team_name=loshadka",
+					"raw": "https://tinkoff.web-gen.ru:444/api/main_service/team/name?team_name=loshadka",
 					"protocol": "https",
 					"host": [
 						"tinkoff",
@@ -23,8 +23,9 @@
 					"port": "444",
 					"path": [
 						"api",
-						"team_search",
-						""
+						"main_service",
+						"team",
+						"name"
 					],
 					"query": [
 						{
@@ -42,7 +43,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://tinkoff.web-gen.ru:444/api/team_search/?conditional_name=l",
+					"raw": "https://tinkoff.web-gen.ru:444/api/service-main/tournament/conditional?conditional_name=s",
 					"protocol": "https",
 					"host": [
 						"tinkoff",
@@ -52,13 +53,14 @@
 					"port": "444",
 					"path": [
 						"api",
-						"team_search",
-						""
+						"service-main",
+						"tournament",
+						"conditional"
 					],
 					"query": [
 						{
 							"key": "conditional_name",
-							"value": "l"
+							"value": "s"
 						}
 					]
 				}
@@ -71,7 +73,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://tinkoff.web-gen.ru:444/api/team_search/?team_id=1",
+					"raw": "https://tinkoff.web-gen.ru:444/api/service-main/team/id?team_id=1",
 					"protocol": "https",
 					"host": [
 						"tinkoff",
@@ -81,8 +83,9 @@
 					"port": "444",
 					"path": [
 						"api",
-						"team_search",
-						""
+						"service-main",
+						"team",
+						"id"
 					],
 					"query": [
 						{
@@ -100,7 +103,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://tinkoff.web-gen.ru:444/api/team_search/?tournament_name=Pervyi&filter=finished",
+					"raw": "https://tinkoff.web-gen.ru:444/api/service-main/tournament/filter?tournament_name=Pervyi&finished=yes",
 					"protocol": "https",
 					"host": [
 						"tinkoff",
@@ -110,8 +113,9 @@
 					"port": "444",
 					"path": [
 						"api",
-						"team_search",
-						""
+						"service-main",
+						"tournament",
+						"filter"
 					],
 					"query": [
 						{
@@ -119,8 +123,8 @@
 							"value": "Pervyi"
 						},
 						{
-							"key": "filter",
-							"value": "finished"
+							"key": "finished",
+							"value": "yes"
 						}
 					]
 				}
@@ -171,7 +175,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://tinkoff.web-gen.ru:444/api/team/new",
+					"raw": "https://tinkoff.web-gen.ru:444/api/main-service/team/new",
 					"protocol": "https",
 					"host": [
 						"tinkoff",
@@ -181,6 +185,7 @@
 					"port": "444",
 					"path": [
 						"api",
+						"main-service",
 						"team",
 						"new"
 					]
@@ -194,7 +199,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://tinkoff.web-gen.ru:444/api/team/tournament/?team_name=\"Loshadka\"",
+					"raw": "https://tinkoff.web-gen.ru:444/api/main-service/team/tournament?team_id=0",
 					"protocol": "https",
 					"host": [
 						"tinkoff",
@@ -204,14 +209,14 @@
 					"port": "444",
 					"path": [
 						"api",
+						"main-service",
 						"team",
-						"tournament",
-						""
+						"tournament"
 					],
 					"query": [
 						{
-							"key": "team_name",
-							"value": "\"Loshadka\""
+							"key": "team_id",
+							"value": "0"
 						}
 					]
 				}
@@ -224,7 +229,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://tinkoff.web-gen.ru:444/api/team_search/game?game_id=1",
+					"raw": "https://tinkoff.web-gen.ru:444/api/team/game?game_id=1",
 					"protocol": "https",
 					"host": [
 						"tinkoff",
@@ -234,7 +239,7 @@
 					"port": "444",
 					"path": [
 						"api",
-						"team_search",
+						"team",
 						"game"
 					],
 					"query": [
@@ -253,7 +258,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://tinkoff.web-gen.ru:444/api//tournament/active?tournament_id=1",
+					"raw": "https://tinkoff.web-gen.ru:444/api/main_service/tournament/active?tournament_id=1",
 					"protocol": "https",
 					"host": [
 						"tinkoff",
@@ -263,7 +268,7 @@
 					"port": "444",
 					"path": [
 						"api",
-						"",
+						"main_service",
 						"tournament",
 						"active"
 					],
@@ -292,7 +297,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://tinkoff.web-gen.ru:444/api/game/complete",
+					"raw": "https://tinkoff.web-gen.ru:444/api/main_service/game/complete",
 					"protocol": "https",
 					"host": [
 						"tinkoff",
@@ -302,6 +307,7 @@
 					"port": "444",
 					"path": [
 						"api",
+						"main_service",
 						"game",
 						"complete"
 					]
