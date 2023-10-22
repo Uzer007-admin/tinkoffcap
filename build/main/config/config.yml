@@ -1,7 +1,7 @@
 db:
   scheme: cproto
-  hostname: rx.web-gen.ru
+  hostname: 127.0.0.1
   port: 6534
   path: tinkoff
 http:
-  port: :3300
+  port: :3303
