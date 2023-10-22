@@ -1,4 +1,4 @@
-# tinkoffcap
+# Tinkoffcap
  Tinkoff Hackaton 2023
 Мы не успели дописать проект, увы.
 https://tinkoff.web-gen.ru/ это ссылка на веб сайт.
