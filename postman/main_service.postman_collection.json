@@ -1,0 +1,313 @@
+{
+	"info": {
+		"_postman_id": "e6cb06fa-4b19-4d74-aa11-616e5346973d",
+		"name": "main_service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30667737",
+		"_collection_link": "https://warped-equinox-488511.postman.co/workspace/tinkoff_auth~301b56a2-354f-440d-af58-629e3e149ad2/collection/27253582-e6cb06fa-4b19-4d74-aa11-616e5346973d?action=share&creator=30667737&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "team searchByName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://tinkoff.web-gen.ru:444/api/team_search/?team_name=loshadka",
+					"protocol": "https",
+					"host": [
+						"tinkoff",
+						"web-gen",
+						"ru"
+					],
+					"port": "444",
+					"path": [
+						"api",
+						"team_search",
+						""
+					],
+					"query": [
+						{
+							"key": "team_name",
+							"value": "loshadka"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchTeamByHint",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://tinkoff.web-gen.ru:444/api/team_search/?conditional_name=l",
+					"protocol": "https",
+					"host": [
+						"tinkoff",
+						"web-gen",
+						"ru"
+					],
+					"port": "444",
+					"path": [
+						"api",
+						"team_search",
+						""
+					],
+					"query": [
+						{
+							"key": "conditional_name",
+							"value": "l"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searcTeamhByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://tinkoff.web-gen.ru:444/api/team_search/?team_id=1",
+					"protocol": "https",
+					"host": [
+						"tinkoff",
+						"web-gen",
+						"ru"
+					],
+					"port": "444",
+					"path": [
+						"api",
+						"team_search",
+						""
+					],
+					"query": [
+						{
+							"key": "team_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "teamSearchByFilterAndName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://tinkoff.web-gen.ru:444/api/team_search/?tournament_name=Pervyi&filter=finished",
+					"protocol": "https",
+					"host": [
+						"tinkoff",
+						"web-gen",
+						"ru"
+					],
+					"port": "444",
+					"path": [
+						"api",
+						"team_search",
+						""
+					],
+					"query": [
+						{
+							"key": "tournament_name",
+							"value": "Pervyi"
+						},
+						{
+							"key": "filter",
+							"value": "finished"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserTeam",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://tinkoff.web-gen.ru:444/api/user/team?user_id=1",
+					"protocol": "https",
+					"host": [
+						"tinkoff",
+						"web-gen",
+						"ru"
+					],
+					"port": "444",
+					"path": [
+						"api",
+						"user",
+						"team"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NewTeam",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"loshadka\",\n    \"users\":[0,1]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://tinkoff.web-gen.ru:444/api/team/new",
+					"protocol": "https",
+					"host": [
+						"tinkoff",
+						"web-gen",
+						"ru"
+					],
+					"port": "444",
+					"path": [
+						"api",
+						"team",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LatstTournament",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://tinkoff.web-gen.ru:444/api/team/tournament/?team_name=\"Loshadka\"",
+					"protocol": "https",
+					"host": [
+						"tinkoff",
+						"web-gen",
+						"ru"
+					],
+					"port": "444",
+					"path": [
+						"api",
+						"team",
+						"tournament",
+						""
+					],
+					"query": [
+						{
+							"key": "team_name",
+							"value": "\"Loshadka\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "team/game",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://tinkoff.web-gen.ru:444/api/team_search/game?game_id=1",
+					"protocol": "https",
+					"host": [
+						"tinkoff",
+						"web-gen",
+						"ru"
+					],
+					"port": "444",
+					"path": [
+						"api",
+						"team_search",
+						"game"
+					],
+					"query": [
+						{
+							"key": "game_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMapTournament",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://tinkoff.web-gen.ru:444/api//tournament/active?tournament_id=1",
+					"protocol": "https",
+					"host": [
+						"tinkoff",
+						"web-gen",
+						"ru"
+					],
+					"port": "444",
+					"path": [
+						"api",
+						"",
+						"tournament",
+						"active"
+					],
+					"query": [
+						{
+							"key": "tournament_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChangeStateGame",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":1,\n    \"score_first\":10,\n    \"score_second\":10,\n    \"winner\":4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://tinkoff.web-gen.ru:444/api/game/complete",
+					"protocol": "https",
+					"host": [
+						"tinkoff",
+						"web-gen",
+						"ru"
+					],
+					"port": "444",
+					"path": [
+						"api",
+						"game",
+						"complete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

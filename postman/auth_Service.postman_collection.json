@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "20dd8ed0-183b-4cb6-bb67-d02625d7a4fa",
+		"name": "auth_Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30667737",
+		"_collection_link": "https://warped-equinox-488511.postman.co/workspace/tinkoff_auth~301b56a2-354f-440d-af58-629e3e149ad2/collection/27253582-20dd8ed0-183b-4cb6-bb67-d02625d7a4fa?action=share&creator=30667737&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-forwarded-for",
+						"value": "83.234.174.21",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"alexey\",\n    \"surname\":\"afg\",\n    \"patronymic\":\"gfdgd\",\n    \"email\":\"fsgfsg@gfsgs.com\",\n    \"login\":\"bogo\",\n    \"password\":\"King1337!\",\n    \"birthday\":15135,\n    \"city\":\"Ros\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://tinkoff.web-gen.ru:444/api/service-auth/signup",
+					"protocol": "https",
+					"host": [
+						"tinkoff",
+						"web-gen",
+						"ru"
+					],
+					"port": "444",
+					"path": [
+						"api",
+						"service-auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"fsgfsg@gfsgs.com\",\n    \"password\":\"King1337!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://tinkoff.web-gen.ru:444/api/service-auth/login",
+					"protocol": "https",
+					"host": [
+						"tinkoff",
+						"web-gen",
+						"ru"
+					],
+					"port": "444",
+					"path": [
+						"api",
+						"service-auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "default(check auth)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"accessToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYm9nbyIsImlkIjoxMSwiZXhwIjoxNjk3OTM0NzM4fQ.izSkLb79swtPw5YeHQOClJP1NFOp2rSIX4TfLiUtYIs\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://tinkoff.web-gen.ru:444/api/service-auth/signup",
+					"protocol": "https",
+					"host": [
+						"tinkoff",
+						"web-gen",
+						"ru"
+					],
+					"port": "444",
+					"path": [
+						"api",
+						"service-auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add 2fa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"stels6555@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://tinkoff.web-gen.ru:444/api/service-auth/auth",
+					"protocol": "https",
+					"host": [
+						"tinkoff",
+						"web-gen",
+						"ru"
+					],
+					"port": "444",
+					"path": [
+						"api",
+						"service-auth",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "validate Code 2fa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"stels6555@gmail.com\",\n    \"code\":\"78274409\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://tinkoff.web-gen.ru:444/api/service-auth/code",
+					"protocol": "https",
+					"host": [
+						"tinkoff",
+						"web-gen",
+						"ru"
+					],
+					"port": "444",
+					"path": [
+						"api",
+						"service-auth",
+						"code"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
